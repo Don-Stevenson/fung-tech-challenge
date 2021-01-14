@@ -72,9 +72,18 @@ body {
 }
 
 #header .auth-options button:hover {
-    background-color: #8b4343;
-    padding: 0 1rem;
-    color: #ffffff;
-    font-size: 1.1rem;
+  background-color: #8b4343;
+  padding: 0 1rem;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 500px) {
+  #header .title {
+    font-size: 1.2rem;
   }
-  
+  #header .auth-options button {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+}
