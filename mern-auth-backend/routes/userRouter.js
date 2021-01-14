@@ -80,14 +80,12 @@ router.post("/login", async (req, res) => {
       user: {
         id: user._id,
         displayName: user.displayName,
-        email: user.email,
       },
     });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
-
 
 // deleting a user
 router.delete("/delete", auth, async (req, res) => {
@@ -99,7 +97,6 @@ router.delete("/delete", auth, async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
-
 
 //checking if the token is valid
 router.post("/tokenIsValid", async (req, res) => {
@@ -121,11 +118,11 @@ router.post("/tokenIsValid", async (req, res) => {
 });
 
 // getting one user
-router.get("/", auth, async (req, res)=>{
-  const user = await User.findById(req.user)
+router.get("/", auth, async (req, res) => {
+  const user = await User.findById(req.user);
   res.json({
     displayName: user.displayName,
-    id: user._id
-  })
-})
+    id: user._id,
+  });
+});
 module.exports = router;
