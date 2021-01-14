@@ -87,10 +87,28 @@ router.post("/login", async (req, res) => {
 });
 
 router.delete("/delete", auth, async (req, res) => {
-  console.log(req.user);
+  // console.log(req.user);
   try {
-    const deletedUser = await User.findByIdAndDelete(req.user)
-    res.json(deletedUser)
+    const deletedUser = await User.findByIdAndDelete(req.user);
+    res.json(deletedUser);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+router.post("/tokenIsValid", async (req, res) => {
+  // console.log(req.user);
+  try {
+    const token = req.header("x-auth-token");
+    if (!token) return res.json(false);
+
+    const verfied = jwt.verify(token, jwtToken);
+    if (!verfied) return res.json(false);
+
+    const user = await User.findById(verfied.id);
+    if (!user) return res.json(false);
+
+    return res.json(true);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
