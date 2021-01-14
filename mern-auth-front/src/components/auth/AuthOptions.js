@@ -12,9 +12,9 @@ export default function AuthOptions() {
     history.push("/login");
   };
   return (
-    <div>
-      <button onClick={register}> Register</button>
-      <button onClick={login}> Login</button>
-    </div>
+    <nav className="auth-options">
+      <button onClick={register}>Register</button>
+      <button onClick={login}>Login</button>
+    </nav>
   );
 }
