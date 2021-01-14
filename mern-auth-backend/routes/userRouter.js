@@ -1,6 +1,10 @@
 const router = require("express").Router();
 const User = require("../models/userModel");
-const bcrypt = require("bcryptjs")
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const { response } = require("express");
+const jwtToken = process.env.JWT_SECRET;
+console.log({ jwtToken });
 
 router.post("/register", async (req, res) => {
   try {
@@ -32,18 +36,58 @@ router.post("/register", async (req, res) => {
       });
     if (!displayName) displayName = email;
 
-    const salt = await bcrypt.genSalt()
-    const passwordHash = await bcrypt.hash(password, salt)
-    const newUser = new User ({
+    const salt = await bcrypt.genSalt();
+    const passwordHash = await bcrypt.hash(password, salt);
+    const newUser = new User({
       email,
       password: passwordHash,
-      displayName
-
-    })
-    const savedUser = await newUser.save()
-    res.json(savedUser)
+      displayName,
+    });
+    const savedUser = await newUser.save();
+    res.json(savedUser);
   } catch (error) {
-    res.status(500).json({error: error.message});
+    res.status(500).json({ error: error.message });
+  }
+});
+
+router.post("/login", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    // validation
+    if (!email || !password)
+      return res
+        .status(400)
+        .json({ msg: "Required fields have not been entered" });
+
+    const user = await User.findOne({ email: email });
+    if (!user) 
+      return res
+      .status(400)
+      .json({ msg: "Email not found. Please register" });
+    
+    const isMatch = await bcrypt.compare(password, user.password);
+     if (!isMatch)
+       return res
+      .status(400)
+      .json({
+        msg: "Invalid credentials, please check your password and email",
+      });
+   
+      const token = jwt.sign({ id: user._id }, jwtToken);
+      console.log("here",{token})
+      res.json({
+        token,
+        user: {
+          id: user._id,
+          displayName: user.displayName,
+          email: user.email
+        },
+      });
+    
+  
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 });
 
