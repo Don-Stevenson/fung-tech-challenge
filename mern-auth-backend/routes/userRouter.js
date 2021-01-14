@@ -2,9 +2,10 @@ const router = require("express").Router();
 const User = require("../models/userModel");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const auth = require("../middleware/auth");
 const { response } = require("express");
 const jwtToken = process.env.JWT_SECRET;
-console.log({ jwtToken });
+// console.log({ jwtToken });
 
 router.post("/register", async (req, res) => {
   try {
@@ -61,31 +62,35 @@ router.post("/login", async (req, res) => {
         .json({ msg: "Required fields have not been entered" });
 
     const user = await User.findOne({ email: email });
-    if (!user) 
-      return res
-      .status(400)
-      .json({ msg: "Email not found. Please register" });
-    
+    if (!user)
+      return res.status(400).json({ msg: "Email not found. Please register" });
+
     const isMatch = await bcrypt.compare(password, user.password);
-     if (!isMatch)
-       return res
-      .status(400)
-      .json({
+    if (!isMatch)
+      return res.status(400).json({
         msg: "Invalid credentials, please check your password and email",
       });
-   
-      const token = jwt.sign({ id: user._id }, jwtToken);
-      console.log("here",{token})
-      res.json({
-        token,
-        user: {
-          id: user._id,
-          displayName: user.displayName,
-          email: user.email
-        },
-      });
-    
-  
+
+    const token = jwt.sign({ id: user._id }, jwtToken);
+    console.log("here", { token });
+    res.json({
+      token,
+      user: {
+        id: user._id,
+        displayName: user.displayName,
+        email: user.email,
+      },
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+router.delete("/delete", auth, async (req, res) => {
+  console.log(req.user);
+  try {
+    const deletedUser = await User.findByIdAndDelete(req.user)
+    res.json(deletedUser)
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
