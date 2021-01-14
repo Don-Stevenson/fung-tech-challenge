@@ -7,6 +7,7 @@ const { response } = require("express");
 const jwtToken = process.env.JWT_SECRET;
 // console.log({ jwtToken });
 
+// registering with credential checks
 router.post("/register", async (req, res) => {
   try {
     let { email, password, passwordCheck, displayName } = req.body;
@@ -51,6 +52,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
+// logging in only with correct credentials
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -86,6 +88,8 @@ router.post("/login", async (req, res) => {
   }
 });
 
+
+// deleting a user
 router.delete("/delete", auth, async (req, res) => {
   // console.log(req.user);
   try {
@@ -96,6 +100,8 @@ router.delete("/delete", auth, async (req, res) => {
   }
 });
 
+
+//checking if the token is valid
 router.post("/tokenIsValid", async (req, res) => {
   // console.log(req.user);
   try {
@@ -114,4 +120,12 @@ router.post("/tokenIsValid", async (req, res) => {
   }
 });
 
+// getting one user
+router.get("/", auth, async (req, res)=>{
+  const user = await User.findById(req.user)
+  res.json({
+    displayName: user.displayName,
+    id: user._id
+  })
+})
 module.exports = router;
