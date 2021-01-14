@@ -4,11 +4,11 @@ import AuthOptions from "../auth/AuthOptions"
 
 export default function Header() {
     return (
-        <div>
-            <Link to="/"> <h1>Fung Tech Challenge</h1>
-
+        <header id="header">
+            <Link to="/"> 
+               <h1 className="title">Fung Tech Challenge</h1>
             </Link>
             <AuthOptions />
-        </div>
+        </header>
     )
 }
