@@ -2,9 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config({path:'/home/don/lighthouse/fung-tech-challenge/.env'});
-// console.log({__dirname})
 const mongoDbConnection = process.env.MONGODB_CONNECTION_STRING;
-// console.log(mongoDbConnection);
+
 
 //express setup
 const app = express();

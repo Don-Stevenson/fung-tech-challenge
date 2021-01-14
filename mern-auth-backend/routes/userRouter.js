@@ -10,7 +10,7 @@ const jwtToken = process.env.JWT_SECRET;
 router.post("/register", async (req, res) => {
   try {
     let { email, password, passwordCheck, displayName } = req.body;
-    console.log(req.body);
+    // console.log(req.body);
 
     // validation
 
@@ -72,7 +72,7 @@ router.post("/login", async (req, res) => {
       });
 
     const token = jwt.sign({ id: user._id }, jwtToken);
-    console.log("here", { token });
+    // console.log("here", { token });
     res.json({
       token,
       user: {
