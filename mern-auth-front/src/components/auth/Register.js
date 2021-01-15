@@ -12,7 +12,6 @@ export default function Register() {
   const [displayName, setDisplayName] = useState();
 
   const { setUserData } = useContext(UserContext);
-
   const history = useHistory();
 
   // function that submits a post new user data to
@@ -43,7 +42,7 @@ export default function Register() {
   return (
     <div className="page">
       <h2>Register</h2>
-      <form onSubmit={submit}>
+      <form className="form" onSubmit={submit}>
         <label htmlFor="register-email">Email</label>
         <input
           id="register-email"
