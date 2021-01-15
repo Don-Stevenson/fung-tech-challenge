@@ -25,6 +25,6 @@ I really enjoyed my this challenge as each time I work with React, I'm able to t
 
 !['Sample Error Display'](https://github.com/Don-Stevenson/fung-tech-challenge/blob/main/docs/Error%20message.png)
 
-!['Home Page'](https://github.com/Don-Stevenson/fung-tech-challenge/blob/main/docs/Home%20Page.png')
+!['Home Page'](https://github.com/Don-Stevenson/fung-tech-challenge/blob/main/docs/Home%20Page.png)
 
 !['User Story Gif'](https://raw.githubusercontent.com/Don-Stevenson/fung-tech-challenge/main/docs/fung-tech-challenge.webm)
