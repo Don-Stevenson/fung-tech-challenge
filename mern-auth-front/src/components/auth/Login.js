@@ -44,7 +44,7 @@ export default function Login() {
 
   return (
     <div className="page">
-      <h2>Login</h2>
+      <h2>Login Page</h2>
       {/* if an error display the error message and click it clear it */}
       {error && (
         <ErrorNotice message={error} clearError={() => setError(undefined)} />
