@@ -15,8 +15,8 @@ I really enjoyed my this challenge as each time I work with React, I'm able to t
 - though not a requirement, building a MongoDb Express backend that handles verifies and persists data and returns messages to the front end when errors occur.
 
 ### features that I'd keep working at 
-- making the site more secure. When I register a user google gives me a data breach message. I would like to solve that issue! I also persist a token to local storage out of convience for the user, but this could potentially expose their data. I'd like to learn more about different security options, but figured I was at a reasonably good place to submit my project.
-- the styling of the page. While I am not a designer by trade, I enjoy making things look appealing, but I see some minor bugs and styling tweeks that I would play with more to achieve a more professional and polished look.
+- making the site more secure. When I register a user google sometimes will give me a data breach message. I would like to solve that issue! I also persist a token to local storage out of convience for the user (for persisting login on refreshes, and opening new tabs), but this could potentially expose their data. I'd like to learn more about different security options, but figured I was at a reasonably good place to submit my project.
+- the styling of the page. While I am not a designer by trade, I enjoy making things look appealing, but I see some minor bugs and styling tweeks that I would like to play with more to achieve a more professional and polished look.
 
 ## The finished result looks like
 
