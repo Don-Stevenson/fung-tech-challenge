@@ -6,7 +6,7 @@ I really enjoyed my this challenge as each time I work with React, I'm able to t
 
 ## To run the challenge
 
-- For and clone the repo to a local repo.  In your newly created local repo, install all packages with npm install. 
+- For and clone the repo to a local repo.  In your newly created local repo, install all packages using the command *npm install*  
 - Next create a .env file with the provided keys *inside* mern-auth-backend root dir.
 - Go into the mern-auth-backend dir and use the command *nodemon server.js* 
 - Go into the mern-auth-front dir use *npm start* to begin the app
