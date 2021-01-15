@@ -48,7 +48,7 @@ export default function Register() {
   // form for registration
   return (
     <div className="page">
-      <h2>Register</h2>
+      <h2>Registeration Page</h2>
 
       {/* display an error message and click it clear it */}
       {error && (
