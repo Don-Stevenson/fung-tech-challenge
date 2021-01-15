@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
 /* reset */
 
 * {
@@ -26,8 +24,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-h1,
-h2,
+
 h3,
 h4,
 h5,
@@ -39,10 +36,23 @@ ol {
   margin-bottom: 1em;
 }
 
+h2 {
+  margin: 0;
+}
+h3 {
+  margin-top: 1em;
+  margin-bottom: 2rem;
+}
+
+h4 {
+  margin-top: 1em;
+  margin-bottom: 1.7rem;
+  color: rgba(255, 255, 255, 0.5);
+}
 /* general style*/
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: sans-serif
 }
 
 .page {
@@ -76,7 +86,7 @@ body {
 }
 
 #header .auth-options button {
-  background-color: #801818;
+  background-color: #c73131;
   padding: 0 1rem;
   color: #ffffff;
   font-size: 1.1rem;
@@ -123,15 +133,14 @@ body {
 
 /* Error Notice Style */
 .error-notice {
-  margin: 1rem 0;
-  padding: 0.5rem;
+  margin: 1rem 0rem;
+  padding: 0.3rem;
   border: 1px solid salmon;
   border-radius: 8px;
   display:  flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(241, 197, 192);
-
 }
 .error-notice button {
   width: 20px;
