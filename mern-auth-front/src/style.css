@@ -114,20 +114,20 @@ body {
 /* Form style */
 .form label {
   display: block;
-  color: #8d6932;
-  text-shadow: 1px 1px 2px rgb(131, 111, 99), 0 0 1em rgb(209, 188, 161),
-    0 0 0.2em rgb(241, 233, 158);
+    color: #614317;
+    text-shadow: 1px 1px 2px rgb(133, 87, 60), 0 0 1em rgb(209, 188, 161),
+      0 0 0.2em rgb(241, 233, 158);
 }
 .form input {
   display: block;
-  color: #5b7cc8;
-  text-shadow: 0.5px 0.5px 1px rgb(114, 132, 155), 0 0 1em rgb(130, 146, 160),
+  color: #101727;
+  text-shadow: 0.3px 0.3px .7px rgb(114, 132, 155), 0 0 1em rgb(130, 146, 160),
     0 0 0.2em rgb(199, 203, 206);
+    margin-bottom: 1rem;
 }
-.form input {
-  margin-bottom: 1rem;
+/* .form input {
   color: #2a52ad;
-}
+} */
 .form label {
   margin-bottom: 0.2rem;
 }
