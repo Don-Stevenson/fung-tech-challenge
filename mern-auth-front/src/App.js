@@ -54,11 +54,13 @@ export default function App() {
         {/* using userContext and custom to hook to check and update creditials from backend */}
         <UserContext.Provider value={{ userData, setUserData }}>
           <Header />
+          <div className="container">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
           </Switch>
+          </div>
         </UserContext.Provider>
       </BrowserRouter>
     </>
