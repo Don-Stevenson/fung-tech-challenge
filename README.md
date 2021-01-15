@@ -6,12 +6,13 @@ I really enjoyed my this challenge as each time I work with React, I'm able to t
 
 ### Features I'm proud of
 
-- using the async await syntax to make calls to the backend
+- using the async await syntax to make calls to the backend.
 - adding error messages that display if fields are incorrect, missing or not matching (in the case of verifying passwords upon registration)
-- using the useContext hook as a reducer 
+- using the useContext hook as a reducer.
 - making all the css from scratch! 
+- creating a responsive design for mobile use.
 - creating a site that is reasonably secure by using JsonWebtokens, Bcrpyt to hash passwords, and making as few gets and posts of senstive data as possible. There's always more to do with security and I enjoy learning about it and implementing it.
-- though not a requirement, building a MongoDb Express backend that handles verifies and persists data and returns messages to the front end when errors occur
+- though not a requirement, building a MongoDb Express backend that handles verifies and persists data and returns messages to the front end when errors occur.
 
 ### features that I'd keep working at 
 - making the site more secure. When I register a user google gives me a data breach message. I would like to solve that issue! I also persist a token to local storage out of convience for the user, but this could potentially expose their data. I'd like to learn more about different security options, but figured I was at a reasonably good place to submit my project.
