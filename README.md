@@ -19,12 +19,12 @@ I really enjoyed my this challenge as each time I work with React, I'm able to t
 
 ## The finished result looks like
 
-[Login Page]()
+[Login Page](https://github.com/Don-Stevenson/fung-tech-challenge/blob/main/docs/Login.png)
 
-[Register Page]()
+[Register Page](https://github.com/Don-Stevenson/fung-tech-challenge/blob/main/docs/Registration.png)
 
-[Sample Error Display]()
+[Sample Error Display](https://github.com/Don-Stevenson/fung-tech-challenge/blob/main/docs/Error%20message.png)
 
-[Home Page]()
+[Home Page](https://github.com/Don-Stevenson/fung-tech-challenge/blob/main/docs/Home%20Page.png)
 
-[Login Gif]()
+[User Story Gif](https://raw.githubusercontent.com/Don-Stevenson/fung-tech-challenge/main/docs/fung-tech-challenge.webm)
