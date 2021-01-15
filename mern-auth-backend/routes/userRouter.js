@@ -3,18 +3,17 @@ const User = require("../models/userModel");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const auth = require("../middleware/auth");
-const { response } = require("express");
+// const { response } = require("express");
 const jwtToken = process.env.JWT_SECRET;
 // console.log({ jwtToken });
 
 // registering with credential checks
 router.post("/register", async (req, res) => {
   try {
-    let { email, password, passwordCheck, displayName } = req.body;
+    let { email, password, passwordCheck } = req.body;
     // console.log(req.body);
 
     // validation
-
     if (!email || !password || !passwordCheck)
       return res
         .status(400)
@@ -36,14 +35,12 @@ router.post("/register", async (req, res) => {
         msg:
           "An account with this email already exists. Please use another email",
       });
-    if (!displayName) displayName = email;
 
     const salt = await bcrypt.genSalt();
     const passwordHash = await bcrypt.hash(password, salt);
     const newUser = new User({
       email,
       password: passwordHash,
-      displayName,
     });
     const savedUser = await newUser.save();
     res.json(savedUser);
@@ -78,8 +75,7 @@ router.post("/login", async (req, res) => {
     res.json({
       token,
       user: {
-        id: user._id,
-        displayName: user.displayName,
+        id: user._id
       },
     });
   } catch (error) {
@@ -121,8 +117,7 @@ router.post("/tokenIsValid", async (req, res) => {
 router.get("/", auth, async (req, res) => {
   const user = await User.findById(req.user);
   res.json({
-    displayName: user.displayName,
-    id: user._id,
+     id: user._id,
   });
 });
 module.exports = router;
