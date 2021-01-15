@@ -4,7 +4,7 @@ In meeting the requirements set out for me, I built a front end in React that al
 
 I really enjoyed my this challenge as each time I work with React, I'm able to try out new things and sharpen my skills over-all.
 
-## To Run the challenge
+## To run the challenge
 
 - For and clone the repo to a local repo.  In your newly created local repo, install all packages with npm install. 
 - Next create a .env file with the provided keys. 
