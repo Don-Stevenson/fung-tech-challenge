@@ -24,8 +24,10 @@ I really enjoyed my this challenge as each time I work with React, I'm able to t
 
 !['Register Page'](https://github.com/Don-Stevenson/fung-tech-challenge/blob/main/docs/Registration.png)
 
-!['Sample Error Display'](https://github.com/Don-Stevenson/fung-tech-challenge/blob/main/docs/Error%20message.png)
+!['Sample Error Display'](https://github.com/Don-Stevenson/fung-tech-challenge/blob/main/docs/Error1.png)
 
-!['Home Page'](https://github.com/Don-Stevenson/fung-tech-challenge/blob/main/docs/Home%20Page.png)
+!['Sample Error 2 Display'](https://github.com/Don-Stevenson/fung-tech-challenge/blob/main/docs/Error2.png)
+
+!['Home Page'](https://github.com/Don-Stevenson/fung-tech-challenge/blob/main/docs/HomePage.png)
 
 ![User Story Gif](https://github.com/Don-Stevenson/fung-tech-challenge/blob/main/docs/fung-tech-challenge.gif)
