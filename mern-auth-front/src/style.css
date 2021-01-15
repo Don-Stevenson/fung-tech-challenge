@@ -120,9 +120,30 @@ body {
   background-color: #b1d0f8;
   font-size: 1.1rem;
   border-radius: 8px;
-  
 }
 
+/* Error Notice Style */
+.error-notice {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid salmon;
+  border-radius: 8px;
+  display:  flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(241, 197, 192);
+
+}
+.error-notice button {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: rgb(228, 67, 67);
+}
+
+
+/* Response Styles */
 @media screen and (max-width: 500px) {
   #header .title {
     font-size: 1.2rem;
