@@ -35,7 +35,8 @@ h6,
 p,
 ul,
 ol {
-  margin: 1em 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 /* general style*/
@@ -61,10 +62,11 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #fa1010;
-  padding: 0 1rem;
+
 }
 #header .title {
   margin: 0;
+  padding: 0 1rem;
   color: #ffffff;
 }
 
@@ -82,9 +84,6 @@ body {
 
 #header .auth-options button:hover {
   background-color: #8b4343;
-  padding: 0 1rem;
-  color: #ffffff;
-  font-size: 1.1rem;
 }
 
 /* Form style */
@@ -143,7 +142,7 @@ body {
 }
 
 
-/* Response Styles */
+/* media queries for responsive desing styling */
 @media screen and (max-width: 500px) {
   #header .title {
     font-size: 1.2rem;
