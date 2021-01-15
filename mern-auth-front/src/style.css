@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: 0;
+  background-color: #eee8df;
 }
 
 a {
@@ -23,7 +24,6 @@ input[type="submit"] {
   color: unset;
   cursor: pointer;
 }
-
 
 h3,
 h4,
@@ -47,12 +47,12 @@ h3 {
 h4 {
   margin-top: 1em;
   margin-bottom: 1.7rem;
-  color: rgba(255, 255, 255, 0.5);
+  color:  #eee8df;
 }
 /* general style*/
 
 body {
-  font-family: sans-serif
+  font-family: sans-serif;
 }
 
 .page {
@@ -60,8 +60,8 @@ body {
 }
 
 .container {
- max-width: 800px;
- margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /*Header Style*/
@@ -71,13 +71,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fa1010;
-
+  background-color: #c5903a;
 }
 #header .title {
   margin: 0;
   padding: 0 1rem;
-  color: #ffffff;
+  color: #fbf8ea;
+  font-size: 1.65rem;
+  background-color: #c5903a;
 }
 
 #header .auth-options {
@@ -86,14 +87,15 @@ body {
 }
 
 #header .auth-options button {
-  background-color: #c73131;
+  background-color: #ac7d33;
   padding: 0 1rem;
   color: #ffffff;
   font-size: 1.1rem;
 }
 
 #header .auth-options button:hover {
-  background-color: #8b4343;
+  background-color: #976c3a;
+  transition: ease-in-out 0.3s;
 }
 
 /* Form style */
@@ -118,9 +120,10 @@ body {
   background-color: #dfdfdf;
 }
 .form input:focus {
-  border: 1px solid #7ca8fa;
+  border: 1px solid #75a4fa;
   outline: none;
-  box-shadow: inset 0px 0px 6px rgba(158, 191, 252, 0.5);
+  box-shadow: inset 0px 0px 6px rgba(110, 136, 185, 0.5);
+  transition: ease-in-out 0.4s;
 }
 
 .form input[type="submit"] {
@@ -137,11 +140,18 @@ body {
   padding: 0.3rem;
   border: 1px solid salmon;
   border-radius: 8px;
-  display:  flex;
+  color: rgb(253, 69, 48);
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(241, 197, 192);
+  /* background-color: rgb(241, 197, 192); */
 }
+
+span.error-notice {
+  background-color: rgb(241, 197, 192);
+  background: #7ca8fa;
+}
+
 .error-notice button {
   width: 20px;
   height: 20px;
@@ -150,14 +160,13 @@ body {
   background-color: rgb(228, 67, 67);
 }
 
-
 /* media queries for responsive desing styling */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 586px) {
   #header .title {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
   #header .auth-options button {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     padding: 0 0.5rem;
   }
 }
