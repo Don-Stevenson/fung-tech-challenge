@@ -45,8 +45,12 @@ body {
 }
 
 .page {
-    padding: 1rem;
+  padding: 1rem;
+}
 
+.container {
+ max-width: 800px;
+ margin: 0 auto;
 }
 
 /*Header Style*/
@@ -83,12 +87,48 @@ body {
   font-size: 1.1rem;
 }
 
+/* Form style */
+.form label,
+.form input {
+  display: block;
+}
+.form input {
+  margin-bottom: 1rem;
+}
+.form label {
+  margin-bottom: 0.2rem;
+}
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0.3rem;
+  border-radius: 8px;
+  border: 1px solid #c2c2c2;
+  background-color: #dfdfdf;
+}
+.form input:focus {
+  border: 1px solid #7ca8fa;
+  outline: none;
+  box-shadow: inset 0px 0px 6px rgba(158, 191, 252, 0.5);
+}
+
+.form input[type="submit"] {
+  padding: 0.3rem 0.5rem;
+  border: 1px solid#5287cc;
+  background-color: #b1d0f8;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  
+}
+
 @media screen and (max-width: 500px) {
   #header .title {
     font-size: 1.2rem;
   }
   #header .auth-options button {
-    font-size: .9rem;
+    font-size: 0.9rem;
     padding: 0 0.5rem;
   }
 }
