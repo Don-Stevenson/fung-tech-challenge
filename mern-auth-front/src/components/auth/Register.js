@@ -9,7 +9,6 @@ export default function Register() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [passwordCheck, setPasswordCheck] = useState();
-  const [displayName, setDisplayName] = useState();
   const [error, setError] = useState();
 
   const { setUserData } = useContext(UserContext);
@@ -22,7 +21,7 @@ export default function Register() {
     e.preventDefault();
 
     try {
-      const newUser = { email, password, passwordCheck, displayName };
+      const newUser = { email, password, passwordCheck};
       await Axios.post("http://localhost:5000/users/register", newUser);
       const loginRes = await Axios.post("http://localhost:5000/users/login", {
         email,
@@ -74,14 +73,6 @@ export default function Register() {
           placeholder="verify your password"
           onChange={(e) => setPasswordCheck(e.target.value)}
         />
-
-        <label htmlFor="register-display-name">Display Name</label>
-        <input
-          id="register-display-name"
-          type="text"
-          onChange={(e) => setDisplayName(e.target.value)}
-        />
-
         <input type="submit" value="Register" />
       </form>
     </div>
