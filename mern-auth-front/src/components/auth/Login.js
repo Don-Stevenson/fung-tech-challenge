@@ -32,6 +32,7 @@ export default function Login() {
       });
 
       // persists the auth token for refresh and new windows in browser
+      // so users don't have to constant login and out
       localStorage.setItem("auth-token", loginRes.data.token);
 
       // using history call to return to homepage
