@@ -54,6 +54,9 @@ export default function Register() {
       {error && (
         <ErrorNotice message={error} clearError={() => setError(undefined)} />
       )}
+       {!error && (
+        <h4> :</h4>
+      )}
       <form className="form" onSubmit={submit}>
         <label htmlFor="register-email">Email</label>
         <input
