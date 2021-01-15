@@ -49,6 +49,10 @@ export default function Login() {
       {error && (
         <ErrorNotice message={error} clearError={() => setError(undefined)} />
       )}
+      {!error && (
+        <h4> :</h4>
+      )}
+      
       <form className="form" onSubmit={submit}>
         <label htmlFor="login-email">Email</label>
         <input
