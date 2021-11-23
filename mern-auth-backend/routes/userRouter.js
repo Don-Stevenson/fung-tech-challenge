@@ -3,16 +3,14 @@ const User = require("../models/userModel");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const auth = require("../middleware/auth");
-// const { response } = require("express");
 const jwtToken = process.env.JWT_SECRET;
-// console.log({ jwtToken });
+
 
 // registering with credential checks
 router.post("/register", async (req, res) => {
   try {
     let { email, password, passwordCheck } = req.body;
-    // console.log(req.body);
-
+   
     // validation
     if (!email || !password || !passwordCheck)
       return res
@@ -71,8 +69,7 @@ router.post("/login", async (req, res) => {
       });
 
     const token = jwt.sign({ id: user._id }, jwtToken);
-    // console.log("here", { token });
-    res.json({
+      res.json({
       token,
       user: {
         id: user._id
@@ -85,7 +82,7 @@ router.post("/login", async (req, res) => {
 
 // deleting a user
 router.delete("/delete", auth, async (req, res) => {
-  // console.log(req.user);
+  
   try {
     const deletedUser = await User.findByIdAndDelete(req.user);
     res.json(deletedUser);
@@ -96,7 +93,7 @@ router.delete("/delete", auth, async (req, res) => {
 
 //checking if the token is valid
 router.post("/tokenIsValid", async (req, res) => {
-  // console.log(req.user);
+ 
   try {
     const token = req.header("x-auth-token");
     if (!token) return res.json(false);
